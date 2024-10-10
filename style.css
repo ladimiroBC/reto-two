@@ -7,70 +7,75 @@
 }
 
 .container-flex {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.container-header {
     height: 60px;
     background-color: rgb(3, 11, 68);
-    display: flex;
-    align-items: center;
-    gap: 16px;
 
-    .item-one {
-        margin-left: 90px;
-    }
-
-    .item-two {
-        width: 50px;
-        height: 30px;
-        background-color: rgb(1, 0, 10);
-        border-radius: 6px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .item-four {
-        input {
-            width: 240px;
-            height: 30px;
-            background-color: rgb(3, 11, 68);
-            border: 1px solid white;
-            border-radius: 6px;
-        }
-
-        input::placeholder {
-            color: grey;
-            font-weight: bold;
-        }
-    }
-
-    .item-five {
-        margin-left: auto;
-        margin-right: 48px;
-
-        button {
-            width: 160px;
-            height: 30px;
-            background-color: rgb(177, 106, 243);
-            border: none;
-            border-radius: 6px;
-        }
-
-        .span-text-btn {
-            font-weight: 800;
-            color: white;
-        }
-    }
-
-    .span-text {
+    .item-header {
+        color: white;
         font-size: 18px;
-        color: white;
     }
 
-    .fa-caret-down {
-        color: white;
+    .item-header:nth-child(1) {
+        flex: 0 0 40%;
+        padding-left: 80px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .item:nth-child(2) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 30px;
+            background-color: rgb(1, 0, 10);
+            border-radius: 6px;
+
+            i {
+                padding-left: 4px;
+            }
+        }
+
+        .item:nth-child(4) {
+            input {
+                width: 240px;
+                height: 30px;
+                background-color: rgb(3, 11, 68);
+                border: 1px solid white;
+                border-radius: 6px;
+            }
+
+            input::placeholder {
+                color: grey;
+                font-weight: bold;
+            }
+        }
     }
 
-    .fa-plus {
-        margin-right: 6px;
+    .item-header:nth-child(2) {
+        flex: 0 0 60%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        div {
+            padding-right: 40px;
+
+            button {
+                width: 160px;
+                height: 30px;
+                font-weight: 800;
+                color: white;
+                border: none;
+                background-color: rgb(177, 106, 243);
+                border-radius: 6px;
+            }
+        }
     }
 }
 
@@ -79,22 +84,12 @@ table {
     border-collapse: collapse;
 
     thead {
-        background-color: rgb(3, 11, 68);
+        height: 40px;
 
         th {
-            height: 40px;
+            background-color: rgb(3, 11, 68);
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             color: white;
-    
-            .container-th {
-                display: flex;
-                justify-content: space-between;
-    
-                i {
-                    color: gray;
-                    margin-right: 4%;
-                }
-            }
         }
     }
 
@@ -104,9 +99,49 @@ table {
             height: 60px;
 
             td {
+                text-align: center;
                 font-size: 16px;
                 font-weight: 600;
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+                .container-product {
+                    padding-left: 38%;
+                    align-items: center;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 4px;
+                    }
+
+                    span {
+                        margin-left: 5px;
+                    }
+                }
+
+                .container-status {
+                    height: 30px;
+                    justify-content: center;
+
+                    div {
+                        width: 100px;
+                        color: rgb(49, 120, 4);
+                        background-color: rgb(211, 246, 223);
+                        border-radius: 50px;
+                        padding-top: 6px;
+                    }
+                }
+
+                .fa-trash {
+                    cursor: pointer;
+                    margin-left: 6px;
+                    color: rgb(230, 20, 20);
+                }
+
+                .fa-pen-to-square {
+                    cursor: pointer;
+                    color: rgb(255, 242, 0);
+                }
             }
         }
 
@@ -117,62 +152,14 @@ table {
         tr:nth-child(even) {
             background-color: rgb(3, 11, 68);
         }
-
-        .container-product {
-            display: flex;
-            align-items: center;
-
-            img {
-                width: 40px;
-                height: 40px;
-                border-radius: 4px;
-            }
-
-            span {
-                margin-left: 5px;
-            }
-        }
-
-        .container-status {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            color: rgb(49, 120, 4);
-            height: 30px;
-            background-color: rgb(211, 246, 223);
-        }
-
-        .fa-trash {
-            cursor: pointer;
-            margin-left: 6px;
-            color: rgb(230, 20, 20);
-        }
-
-        .fa-pen-to-square {
-            cursor: pointer;
-            color: rgb(255, 242, 0);
-        }
     }
 
     tfoot {
         background-color: rgb(3, 11, 68);
-        
+
         tr {
             height: 80px;
 
-            .container-foot > .container-pagination-one,
-            .container-foot > .container-pagination-two,
-            .container-foot > .container-pagination-three {
-                width: 30px;
-                height: 40px;
-                background-color: rgb(39, 39, 110);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 10px;
-            }
-            
             .container-foot {
                 color: white;
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -182,7 +169,17 @@ table {
                 align-items: center;
                 gap: 6px;
 
-                .container-pagination-one {
+                .container-pagination {
+                    width: 30px;
+                    height: 40px;
+                    background-color: rgb(39, 39, 110);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                }
+
+                .container-pagination:nth-child(2) {
                     background-color: rgb(161, 77, 239);
                 }
             }
