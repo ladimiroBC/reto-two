@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,229 @@
     <title>Table</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
+
+    <div class="table-controls">
+        <span>Show</span>
+        <div>
+            <span>10</span>
+            <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <span>Entries</span>
+        <input type="text" id="search" class="form-control" placeholder="Buscar en la tabla...">
+        <div>
+            <button id="addUser" class="btn btn-primary">+ Add Customer</button>
+        </div>
+        <div>
+            <button id="addUser" class="btn btn-primary">Add</button>
+        </div>
+    </div>
+    <div class="table-container">
+        <table class="responsive-table">
+            <thead>
+                <tr>
+                    <th scope="col"><span>Tracking ID</span></th>
+                    <th scope="col"><span>Product</span></th>
+                    <th scope="col"><span>Customer</span></th>
+                    <th scope="col"><span>Date</span></th>
+                    <th scope="col"><span>Amount</span></th>
+                    <th scope="col"><span>Payment Mode</span></th>
+                    <th scope="col"><span>Status</span></th>
+                    <th scope="col"><span>Action</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#2046</td>
+                    <td>
+                        <div class="container-flex container-product">
+                            <div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAQKaAwxSRrL0Xiua9WlZkgqO_IgZNuv0OKw&s" alt="hat">
+                                <span>Hat</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Paula Acero</td>
+                    <td>8/10/2024</td>
+                    <td>$4.95</td>
+                    <td>Transfer Bank</td>
+                    <td><div class="container-status"><span>Delivered</span></div></td>
+                    <td><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></td>
+                </tr>
+                <tr>
+                    <td>#6589</td>
+                    <td>
+                        <div class="container-flex container-product">
+                            <div>
+                                <img src="https://www.lg.com/content/dam/channel/wcms/co/images/monitores/24mp400-b_awp_escb_co_c/Basic-450.jpg" alt="monitor">
+                                <span>Monitor</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Paula Acero</td>
+                    <td>8/10/2024</td>
+                    <td>$4.95</td>
+                    <td>Transfer Bank</td>
+                    <td><div class="container-status"><span>Delivered</span></div></td>
+                    <td><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></td>
+                </tr>
+                <tr>
+                    <td>#1549</td>
+                    <td>
+                        <div class="container-flex container-product">
+                            <div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT84Fy08oMXKt99j3kD-x7c4s3YMMnWA5fbFA&s" alt="laptop">
+                                <span>Laptop</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Paula Acero</td>
+                    <td>8/10/2024</td>
+                    <td>$4.95</td>
+                    <td>Transfer Bank</td>
+                    <td><div class="container-status"><span>Delivered</span></div></td>
+                    <td><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></td>
+                </tr>
+                <tr>
+                    <td>#2540</td>
+                    <td>
+                        <div class="container-flex container-product">
+                            <div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfSiQQ0gOC2sx3xQge5Ywx-OUNZwvMJ_cLUw&s" alt="phone">
+                                <span>Phone</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Paula Acero</td>
+                    <td>8/10/2024</td>
+                    <td>$4.95</td>
+                    <td>Transfer Bank</td>
+                    <td><div class="container-status"><span>Delivered</span></div></td>
+                    <td><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></td>
+                </tr>
+                <tr>
+                    <td>#4701</td>
+                    <td>
+                        <div class="container-flex container-product">
+                            <div>
+                                <img src="https://obag.com.mx/cdn/shop/files/create_per_te_O_bag_mini_def.jpg?v=1641591956" alt="bag">
+                                <span>Bag</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Paula Acero</td>
+                    <td>8/10/2024</td>
+                    <td>$4.95</td>
+                    <td>Transfer Bank</td>
+                    <td><div class="container-status"><span>Delivered</span></div></td>
+                    <td><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></td>
+                </tr>
+                <tr>
+                    <td>#9701</td>
+                    <td>
+                        <div class="container-flex container-product">
+                            <div>
+                                <img src="https://www.jbl.com.co/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw4686120a/JBL_Quantum_100_Product%20Image_Hero_Black_02.jpg?sw=270&sh=330&sm=fit&sfrm=png" alt="headset">
+                                <span>Headset</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Paula Acero</td>
+                    <td>8/10/2024</td>
+                    <td>$4.95</td>
+                    <td>Transfer Bank</td>
+                    <td><div class="container-status"><span>Delivered</span></div></td>
+                    <td><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></td>
+                </tr>
+                <tr>
+                    <td>#9701</td>
+                    <td>
+                        <div class="container-flex container-product">
+                            <div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu8jLVPe-Hlou-uHw2CNUG8MH19MIi1L4XAw&s" alt="mouse">
+                                <span>Mouse</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Paula Acero</td>
+                    <td>8/10/2024</td>
+                    <td>$4.95</td>
+                    <td>Transfer Bank</td>
+                    <td><div class="container-status"><span>Delivered</span></div></td>
+                    <td><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></td>
+                </tr>
+                <tr>
+                    <td>#9701</td>
+                    <td>
+                        <div class="container-flex container-product">
+                            <div>
+                                <img src="https://m.media-amazon.com/images/I/61taOJJ7-sS._AC_UF894,1000_QL80_.jpg" alt="clock">
+                                <span>Clock</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Paula Acero</td>
+                    <td>8/10/2024</td>
+                    <td>$4.95</td>
+                    <td>Transfer Bank</td>
+                    <td><div class="container-status"><span>Delivered</span></div></td>
+                    <td><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></td>
+                </tr>
+                <tr>
+                    <td>#9701</td>
+                    <td>
+                        <div class="container-flex container-product">
+                            <div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG-LK0KdGnIIpQ7l138ddCqhEa7htbB_Uh0w&s" alt="tshirt">
+                                <span>T-Shirt</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Paula Acero</td>
+                    <td>8/10/2024</td>
+                    <td>$4.95</td>
+                    <td>Transfer Bank</td>
+                    <td><div class="container-status"><span>Delivered</span></div></td>
+                    <td><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></td>
+                </tr>
+                <tr>
+                    <td>#9701</td>
+                    <td>
+                        <div class="container-flex container-product">
+                            <div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaMkKhYwiFamK9Lu7CgnYXCO1UH02wUtjnvObn-WcvtE0opRHYrYgHG_PEngHn_7jadAc&usqp=CAU" alt="shoes">
+                                <span>Shoes</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Paula Acero</td>
+                    <td>8/10/2024</td>
+                    <td>$4.95</td>
+                    <td>Transfer Bank</td>
+                    <td><div class="container-status"><span>Delivered</span></div></td>
+                    <td><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="8">
+                        <div class="container-foot">
+                            <span>Previous</span>
+                            <div class="container-pagination">1</div>
+                            <div class="container-pagination">2</div>
+                            <div class="container-pagination">3</div>
+                            <span>Next</span>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
+
+    
+    <!--
     <div class="container-flex container-header">
         <div class="item-header">
             <div class="item">
@@ -213,5 +436,7 @@
             </tr>
         </tfoot>
     </table>
+    -->
+    
 </body>
 </html>
